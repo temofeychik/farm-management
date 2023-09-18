@@ -1,0 +1,29 @@
+<div class="container-fluid" style="margin-top: 25px;">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead class="table">
+            <tr>
+              <th>Animal Id</th>
+              <th>Animal Name</th>
+              <th>Animal Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let animal of animals">
+              <td>{{ animal.id }}</td>
+              <td>{{ animal.name }}</td>
+              <td>
+                <button type="button" id="delete" class="btn btn-sm btn-danger"
+                  (click)="deleteAnimal(animal.id)">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

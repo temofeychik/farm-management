@@ -1,0 +1,15 @@
+<header>
+  <h1 class="mt-1">Animal Manager</h1>
+</header>
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">
+      <button class="btn btn-sm btn-primary card-link" (click)="showAddDialog()">Add Animal
+      </button>
+    </h4>
+  </div>
+</div>
+
+
+<animal-list [animals]="animals" (animalDeleted)="refreshList()"></animal-list>
